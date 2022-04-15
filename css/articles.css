@@ -15,17 +15,12 @@ html, body {
 /* #region Page Grid Layout */
 body {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
   grid-template-rows: max-content 1fr max-content;
 }
 
 /* #endregion */
 
 .header {
-  grid-area: "header";
   width: 100%;
 
   display: flex;
@@ -53,7 +48,6 @@ body {
   max-width: 1050px;
   margin: 0px auto;
 
-  grid-area: "main";
   width: 100%;
   padding: 15px;
 }
@@ -112,6 +106,22 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: white;
+}
+
+.main__articles__article__body__download {
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  bottom: 10px;
+  border: none;
+  right: 10px;
+  color: white;
+}
+
+.main__articles__article__body__download > button {
+  width: 100%;
 }
 
 /* Estilos del Footer */
