@@ -95,7 +95,8 @@ html, body {
 }
 
 .main__articles {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -104,8 +105,8 @@ html, body {
   border-radius: 2px;
   position: relative;
   overflow: hidden;
-  height: 220px;
-  width: 300px;
+  /* height: 220px;
+  width: 300px; */
 }
 
 .main__articles__article__title {

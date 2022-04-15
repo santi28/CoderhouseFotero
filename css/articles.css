@@ -1,0 +1,32 @@
+
+.main__articles__article__body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #333333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  transform: translateY(100%);
+  transition: .2s all;
+}
+
+.main__articles__article__image {
+  transition: .2s all;
+}
+
+.main__articles__article:hover .main__articles__article__body {
+  transform: translateY(0%);
+}
+
+.main__articles__article:hover .main__articles__article__image {
+  transform: scale(1.2);
+  filter: blur(2px);
+}
+
+.main__articles__article__body__title {
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
