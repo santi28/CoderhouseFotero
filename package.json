@@ -4,7 +4,8 @@
   "description": "Página para el proyecto final de CodeHouse. Fotero es una empresa de fotografía que se dedica a viajar por el mundo y capturar imagenes de todo tipo de paisajes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/santi28/CoderhouseFotero/issues"
   },
-  "homepage": "https://github.com/santi28/CoderhouseFotero#readme"
+  "homepage": "https://github.com/santi28/CoderhouseFotero#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
 }

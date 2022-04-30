@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333333;
+  color: #fff;
+
+  .socialbar {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
+    flex-direction: row;
+  }
+}

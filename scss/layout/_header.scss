@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  min-height: 80px;
+  border-bottom: 2px solid #00000033;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+    }
+  }  
+  
+  .navbar {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
+    flex-direction: row;
+  }
+}

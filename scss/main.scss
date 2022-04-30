@@ -1,0 +1,12 @@
+// Utilities
+@import "utilities/variables";
+
+// Base
+@import 'base/reset';
+
+// Layouts
+@import "layout/header";
+@import "layout/footer";
+
+// Pages
+@import 'views/home';
