@@ -1,0 +1,20 @@
+{
+  "name": "coderhouse-fotero",
+  "version": "1.0.0",
+  "description": "Página para el proyecto final de CodeHouse. Fotero es una empresa de fotografía que se dedica a viajar por el mundo y capturar imagenes de todo tipo de paisajes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santi28/CoderhouseFotero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santi28/CoderhouseFotero/issues"
+  },
+  "homepage": "https://github.com/santi28/CoderhouseFotero#readme"
+}
