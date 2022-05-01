@@ -1,7 +1,11 @@
-.homepage {
+body {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content; }
+
+.main, .homepage {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
+  min-height: 600px;
   position: relative;
   margin: 0 auto;
   max-width: 1085px;
@@ -43,6 +47,58 @@ html, body {
   @media only screen and (min-width: 768px) {
     .header {
       flex-direction: row; } }
+
+.main .titleWrapper {
+  flex-direction: column;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px; }
+
+.main .articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; }
+  .main .articles article {
+    border: 2px solid #333333;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden; }
+    .main .articles article .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .2s all; }
+    .main .articles article .body {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 15px;
+      background-color: #333333;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transform: translateY(100%);
+      transition: .2s all; }
+      .main .articles article .body .title {
+        font-weight: 400;
+        font-size: 14px;
+        color: white; }
+      .main .articles article .body .download {
+        background-color: transparent;
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        height: 24px;
+        bottom: 10px;
+        border: none;
+        width: 24px;
+        right: 10px; }
+        .main .articles article .body .download button {
+          width: 100%; }
+    .main .articles article:hover .body {
+      transform: translateY(0%); }
+    .main .articles article:hover .image {
+      transform: scale(1.2);
+      filter: blur(2px); }
 
 .footer {
   display: flex;

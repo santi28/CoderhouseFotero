@@ -1,0 +1,20 @@
+.main {
+  @extend %main-base;
+
+  .titleWrapper {
+    flex-direction: column;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    article {
+      @include article;
+    }
+  }
+}
