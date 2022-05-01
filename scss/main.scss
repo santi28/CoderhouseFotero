@@ -1,6 +1,12 @@
 body {
   display: grid;
+  grid-template-rows: max-content max-content max-content;
+  gap: 30px;
+}
+
+body.homepage {
   grid-template-rows: max-content 1fr max-content;
+  gap: 0;
 }
 
 // Utilities

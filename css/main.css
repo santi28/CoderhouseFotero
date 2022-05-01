@@ -1,6 +1,11 @@
 body {
   display: grid;
-  grid-template-rows: max-content 1fr max-content; }
+  grid-template-rows: max-content max-content max-content;
+  gap: 30px; }
+
+body.homepage {
+  grid-template-rows: max-content 1fr max-content;
+  gap: 0; }
 
 .main, .homepage {
   display: flex;
@@ -9,7 +14,6 @@ body {
   position: relative;
   margin: 0 auto;
   max-width: 1085px;
-  margin-top: 30px;
   padding: 0 28px; }
 
 * {
@@ -48,57 +52,64 @@ html, body {
     .header {
       flex-direction: row; } }
 
-.main .titleWrapper {
-  flex-direction: column;
-  margin-bottom: 15px;
-  display: flex;
-  gap: 15px; }
-
-.main .articles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px; }
-  .main .articles article {
-    border: 2px solid #333333;
-    border-radius: 2px;
-    position: relative;
-    overflow: hidden; }
-    .main .articles article .image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .2s all; }
-    .main .articles article .body {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 10px 15px;
-      background-color: #333333;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      transform: translateY(100%);
-      transition: .2s all; }
-      .main .articles article .body .title {
-        font-weight: 400;
-        font-size: 14px;
-        color: white; }
-      .main .articles article .body .download {
-        background-color: transparent;
+.main {
+  min-height: calc(100vh - 75px - 148px); }
+  .main .titleWrapper {
+    flex-direction: column;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px; }
+  .main .articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; }
+    .main .articles article {
+      border: 2px solid #333333;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden; }
+      .main .articles article .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s all; }
+      .main .articles article .body {
         position: absolute;
-        cursor: pointer;
-        color: white;
-        height: 24px;
-        bottom: 10px;
-        border: none;
-        width: 24px;
-        right: 10px; }
-        .main .articles article .body .download button {
-          width: 100%; }
-    .main .articles article:hover .body {
-      transform: translateY(0%); }
-    .main .articles article:hover .image {
-      transform: scale(1.2);
-      filter: blur(2px); }
+        bottom: 0;
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #333333;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transform: translateY(100%);
+        transition: .2s all; }
+        .main .articles article .body .title {
+          font-weight: 400;
+          font-size: 14px;
+          color: white; }
+        .main .articles article .body .download {
+          background-color: transparent;
+          position: absolute;
+          cursor: pointer;
+          color: white;
+          height: 24px;
+          bottom: 10px;
+          border: none;
+          width: 24px;
+          right: 10px; }
+          .main .articles article .body .download button {
+            width: 100%; }
+      .main .articles article:hover .body {
+        transform: translateY(0%); }
+      .main .articles article:hover .image {
+        transform: scale(1.2);
+        filter: blur(2px); }
+    @media only screen and (min-width: 375px) {
+      .main .articles {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (min-width: 768px) {
+      .main .articles {
+        grid-template-columns: repeat(4, 1fr); } }
 
 .footer {
   display: flex;
@@ -121,7 +132,7 @@ html, body {
       flex-direction: row; } }
 
 .homepage {
-  height: calc(100vh - 88px);
+  height: 100vh;
   width: 100%;
   max-width: unset;
   margin: unset;

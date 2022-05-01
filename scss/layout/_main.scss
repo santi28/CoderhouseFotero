@@ -1,5 +1,6 @@
 .main {
   @extend %main-base;
+  min-height: calc(100vh - 75px - 148px);
 
   .titleWrapper {
     flex-direction: column;
@@ -10,11 +11,19 @@
 
   .articles {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
 
     article {
       @include article;
+    }
+
+    @media only screen and (min-width: map-get($map: $sizes, $key: mobile-md)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
