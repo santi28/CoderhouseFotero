@@ -53,6 +53,7 @@ html, body {
       flex-direction: row; } }
 
 .main {
+  gap: 10px;
   min-height: calc(100vh - 75px - 148px); }
   .main .titleWrapper {
     flex-direction: column;
@@ -110,6 +111,22 @@ html, body {
     @media only screen and (min-width: 768px) {
       .main .articles {
         grid-template-columns: repeat(4, 1fr); } }
+  .main .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    text-align: center; }
+    .main .members .member img {
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      height: 140px;
+      width: 140px;
+      margin-bottom: 10px; }
+    @media only screen and (min-width: null) {
+      .main .members {
+        justify-content: flex-start; } }
 
 .footer {
   display: flex;

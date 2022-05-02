@@ -56,3 +56,14 @@
     filter: blur(2px);
   }
 }
+
+@mixin member {
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    height: 140px;
+    width: 140px;
+    margin-bottom: 10px;
+  }
+}
