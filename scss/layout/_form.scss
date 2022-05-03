@@ -1,0 +1,41 @@
+.form {
+  h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    max-width: 475px;
+    gap: 15px;
+    
+    .inputWrapper {
+      @include inputwrapper;
+    }
+
+    .firstset {
+      display: flex;
+      gap: 15px;
+    }
+
+    .buttonset {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      input {
+        @extend %input;
+
+        padding: 8px 5px;
+        min-width: 100px;
+        background-color: #333333;
+        color: white;
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+  }
+}

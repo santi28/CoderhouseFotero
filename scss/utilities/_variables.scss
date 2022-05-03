@@ -12,3 +12,11 @@ $sizes: (
   max-width: 1085px;
   padding: 0 28px; 
 }
+
+%input {
+  font-size: .8rem;
+  padding: 10px 12px;
+  border: 3px solid #333333;
+  border-radius: 8px;
+  width: 100%;
+}
