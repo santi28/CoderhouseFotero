@@ -203,6 +203,8 @@ html, body {
     color: #fff;
     margin: 0 auto;
     z-index: 1; }
+    .homepage .text h2 {
+      font-style: italic; }
   .homepage .image {
     position: absolute;
     object-fit: cover;
