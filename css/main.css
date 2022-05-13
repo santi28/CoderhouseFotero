@@ -67,11 +67,14 @@ html, body {
     margin-bottom: 15px;
     display: flex;
     gap: 15px; }
+  .main p {
+    white-space: pre-line; }
   .main .articles {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px; }
     .main .articles article {
+      height: 225px;
       border: 2px solid #333333;
       border-radius: 2px;
       position: relative;
@@ -82,6 +85,7 @@ html, body {
         object-fit: cover;
         transition: .2s all; }
       .main .articles article .body {
+        display: flex;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -95,6 +99,18 @@ html, body {
           font-weight: 400;
           font-size: 14px;
           color: white; }
+        .main .articles article .body .title_author {
+          display: flex;
+          flex-direction: column; }
+          .main .articles article .body .title_author .title {
+            font-weight: 400;
+            font-size: 14px;
+            color: white; }
+          .main .articles article .body .title_author a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: .8rem;
+            font-style: italic; }
         .main .articles article .body .download {
           background-color: transparent;
           position: absolute;
@@ -117,7 +133,7 @@ html, body {
         grid-template-columns: repeat(2, 1fr); } }
     @media only screen and (min-width: 768px) {
       .main .articles {
-        grid-template-columns: repeat(4, 1fr); } }
+        grid-template-columns: repeat(3, 1fr); } }
   .main .members {
     display: flex;
     flex-wrap: wrap;

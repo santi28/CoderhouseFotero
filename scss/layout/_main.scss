@@ -10,6 +10,10 @@
     gap: 15px;
   }
 
+  p {
+    white-space: pre-line;
+  }
+
   .articles {
     display: grid;
     grid-template-columns: 1fr;
@@ -24,7 +28,7 @@
     }
 
     @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
